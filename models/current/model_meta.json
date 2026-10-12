@@ -1,0 +1,9 @@
+{
+  "architecture": "Unet-ResNet34",
+  "in_channels": 8,
+  "classes": 1,
+  "active_checkpoint": "unet_resnet34_v1.pt",
+  "best_val_iou": 0.1953625514689806,
+  "best_val_f1": 0.3268674449084918,
+  "best_epoch": 6
+}

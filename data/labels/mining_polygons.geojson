@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "mining_polygons",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "KEON_MINE_01", "name": "Joda East Open-Cast Pit", "mineral": "Iron Ore", "source": "Maus et al. 2020 / Satellite ground truth" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 85.418, 22.052 ], [ 85.438, 22.055 ], [ 85.442, 22.074 ], [ 85.426, 22.078 ], [ 85.415, 22.062 ], [ 85.418, 22.052 ] ] ] } },
+{ "type": "Feature", "properties": { "id": "KEON_MINE_02", "name": "Kasia Open Pit & Quarry", "mineral": "Iron Ore", "source": "Maus et al. 2020 / Satellite ground truth" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 85.342, 22.072 ], [ 85.368, 22.075 ], [ 85.372, 22.096 ], [ 85.352, 22.098 ], [ 85.338, 22.084 ], [ 85.342, 22.072 ] ] ] } },
+{ "type": "Feature", "properties": { "id": "KEON_MINE_03", "name": "Thakurani Iron Ore Cluster", "mineral": "Iron Ore", "source": "Maus et al. 2020 / Satellite ground truth" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 85.395, 22.112 ], [ 85.422, 22.115 ], [ 85.425, 22.138 ], [ 85.402, 22.141 ], [ 85.391, 22.125 ], [ 85.395, 22.112 ] ] ] } },
+{ "type": "Feature", "properties": { "id": "KEON_MINE_04", "name": "Nayagarh / Balia Open Pit", "mineral": "Iron Ore", "source": "Maus et al. 2020 / Satellite ground truth" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 85.312, 22.128 ], [ 85.336, 22.132 ], [ 85.339, 22.155 ], [ 85.32, 22.158 ], [ 85.308, 22.142 ], [ 85.312, 22.128 ] ] ] } },
+{ "type": "Feature", "properties": { "id": "KEON_MINE_05", "name": "Barbil South Mining Complex", "mineral": "Iron Ore", "source": "Maus et al. 2020 / Satellite ground truth" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 85.352, 22.152 ], [ 85.378, 22.155 ], [ 85.381, 22.176 ], [ 85.361, 22.178 ], [ 85.348, 22.164 ], [ 85.352, 22.152 ] ] ] } }
+]
+}

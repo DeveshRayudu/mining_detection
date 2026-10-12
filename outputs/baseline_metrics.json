@@ -1,0 +1,37 @@
+{
+  "evaluation_split": "validation",
+  "reference_scene": "S2A_45QUE_20240102_0_L2A",
+  "threshold_baseline": {
+    "parameters": {
+      "ndvi_thresh": 0.4,
+      "bsi_thresh": -0.05,
+      "mndwi_max": 0.0
+    },
+    "metrics": {
+      "iou": 0.2734508662302928,
+      "f1": 0.42946433738707207,
+      "precision": 0.3150262900944775,
+      "recall": 0.6744789975969948,
+      "tp": 51945,
+      "fp": 112946,
+      "fn": 25070,
+      "tn": 268791
+    }
+  },
+  "random_forest_baseline": {
+    "parameters": {
+      "n_estimators": 100,
+      "max_depth": 12
+    },
+    "metrics": {
+      "iou": 0.17738876612018148,
+      "f1": 0.30132573237423704,
+      "precision": 0.2062973777706466,
+      "recall": 0.5586703888845567,
+      "tp": 43026,
+      "fp": 165537,
+      "fn": 33989,
+      "tn": 216200
+    }
+  }
+}

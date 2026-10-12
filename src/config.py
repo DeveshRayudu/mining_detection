@@ -57,8 +57,31 @@ class ProjectConfig(BaseModel):
     state: str = Field(default="Odisha", description="Target state")
     mineral: str = Field(default="Iron Ore", description="Primary mineral target")
     
-    # EPSG:32645 corresponds to WGS 84 / UTM zone 45N (Covers Odisha, Jharkhand, West Bengal)
+    # Keonjhar Iron Ore Belt (Joda-Barbil-Noamundi-Koira mining cluster)
+    # [min_lon, min_lat, max_lon, max_lat] in WGS84
+    aoi_bbox_wgs84: Tuple[float, float, float, float] = Field(
+        default=(85.30, 22.05, 85.45, 22.18),
+        description="Bounding box for Keonjhar mining belt: ~15km x 14km"
+    )
+    
+    # EPSG:32645 corresponds to WGS 84 / UTM zone 45N (Keonjhar belt)
     target_crs: str = Field(default="EPSG:32645", description="Projected metric CRS for geometry & area calculations")
+    
+    # Open STAC API endpoint
+    stac_api_url: str = Field(
+        default="https://earth-search.aws.element84.com/v1",
+        description="Public STAC catalog with AWS open Sentinel-2 L2A COGs"
+    )
+    
+    # Target dates representing distinct seasons (Winter clear sky, Dry pre-monsoon, Post-monsoon)
+    default_acquisition_dates: List[Tuple[str, str]] = Field(
+        default=[
+            ("2024-01-01", "2024-01-31"),  # Winter baseline (low haze, clear vegetation)
+            ("2024-04-01", "2024-04-30"),  # Pre-monsoon dry season (bare soil, high pit visibility)
+            ("2024-11-01", "2024-11-30"),  # Post-monsoon (annual change comparison)
+        ],
+        description="Temporal windows for multi-date acquisition"
+    )
     
     # Geometric and operational thresholds
     min_mining_area_sqm: float = Field(
